@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naveena Ruby Thomas | Portfolio</title>
+  <meta name="description" content="Portfolio of Naveena Ruby Thomas - Software Engineer & Researcher. Built with Magic UI and Tailwind CSS design system.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: 'var(--background)',
+            foreground: 'var(--foreground)',
+            card: {
+              DEFAULT: 'var(--card)',
+              foreground: 'var(--card-foreground)',
+            },
+            primary: {
+              DEFAULT: 'var(--primary)',
+              foreground: 'var(--primary-foreground)',
+            },
+            muted: {
+              DEFAULT: 'var(--muted)',
+              foreground: 'var(--muted-foreground)',
+            },
+            border: 'var(--border)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet (Magic UI Components) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-background text-foreground antialiased font-sans selection:bg-primary selection:text-primary-foreground relative pb-28">
+
+  <!-- Central Page Container (matching Magic UI 2xl layout) -->
+  <main class="max-w-2xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex flex-col gap-14 relative">
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="relative">
+      <div id="hero-section"></div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="relative">
+      <div id="about-section"></div>
+    </section>
+
+    <!-- 3. Work Experience Section -->
+    <section id="work" class="relative">
+      <div id="work-section"></div>
+    </section>
+
+    <!-- 4. Education Section -->
+    <section id="education" class="relative">
+      <div id="education-section"></div>
+    </section>
+
+    <!-- 5. Skills Section -->
+    <section id="skills" class="relative">
+      <div id="skills-section"></div>
+    </section>
+
+    <!-- 6. Projects Section -->
+    <section id="projects" class="relative">
+      <div id="projects-section"></div>
+    </section>
+
+    <!-- 7. Hackathons & Achievements Section -->
+    <section id="hackathons" class="relative">
+      <div id="hackathons-section"></div>
+    </section>
+
+    <!-- 8. Contact Section -->
+    <section id="contact" class="relative">
+      <div id="contact-section"></div>
+    </section>
+
+  </main>
+
+  <!-- Magic UI Floating Bottom Dock -->
+  <div class="magic-dock-container">
+    <nav class="magic-dock" id="magic-dock" aria-label="Floating Navigation Dock">
+      <!-- Injected dynamically by app.js -->
+    </nav>
+  </div>
+
+  <!-- Scripts -->
+  <script src="resume-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
