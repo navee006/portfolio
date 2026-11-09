@@ -17,7 +17,7 @@ const RESUME_DATA = {
     "Computer Science & Engineering Undergraduate at Amal Jyothi College of Engineering. Passionate about software engineering, data structures, and modern web development.",
   summary:
     "I am a Computer Science & Engineering student at Amal Jyothi College of Engineering (B.Tech CSE, 2024–2028 batch), recognized on the Manager's / Principal's Honours List for academic excellence. I have a strong foundation in core programming, problem-solving, and algorithmic thinking. I love building responsive web applications, exploring open-source technologies, and collaborating on impactful engineering projects.",
-  avatarUrl: "asset/HPIM0777.JPG",
+  avatarUrl: "asset/profile.jpeg",
   
   navbar: [
     { href: "#hero", icon: "home", label: "Home" },
@@ -41,7 +41,7 @@ const RESUME_DATA = {
       },
       GitHub: {
         name: "GitHub",
-        url: "https://github.com",
+        url: "https://github.com/navee006",
         icon: "github",
         navbar: true,
       },
@@ -215,3 +215,4 @@ const RESUME_DATA = {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = RESUME_DATA;
 }
+

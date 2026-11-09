@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderHackathons();
   renderContact();
+  renderFooter();
   renderDock();
   
   initBlurFade();
@@ -419,8 +420,48 @@ function renderContact() {
   `;
 }
 
+
 /* ----------------------------------------------------
- * 10. MAGIC UI FLOATING DOCK
+ * 10. FOOTER SECTION
+ * ---------------------------------------------------- */
+function renderFooter() {
+  const container = document.getElementById("footer-section");
+  if (!container) return;
+
+  const data = RESUME_DATA;
+  const currentYear = new Date().getFullYear();
+
+  container.innerHTML = `
+    <div class="border-t border-border pt-8 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground blur-fade">
+      <div class="flex items-center gap-1.5">
+        <span>Designed & Developed by</span>
+        <a href="${data.contact.social.LinkedIn.url}" target="_blank" rel="noopener noreferrer" class="font-medium text-foreground hover:underline underline-offset-4">
+          ${data.name}
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="${data.contact.social.LinkedIn.url}" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors flex items-center gap-1.5" aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="size-3.5"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="${data.contact.social.GitHub.url}" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors flex items-center gap-1.5" aria-label="GitHub">
+          <i data-lucide="github" class="size-3.5"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="${data.contact.social.Email.url}" class="hover:text-foreground transition-colors flex items-center gap-1.5" aria-label="Email">
+          <i data-lucide="mail" class="size-3.5"></i>
+          <span>Email</span>
+        </a>
+      </div>
+      <div>
+        <span>&copy; ${currentYear} ${data.name}. All rights reserved.</span>
+      </div>
+    </div>
+  `;
+}
+
+/* ----------------------------------------------------
+ * 11. MAGIC UI FLOATING DOCK
  * ---------------------------------------------------- */
 function renderDock() {
   const dockContainer = document.getElementById("magic-dock");
@@ -464,7 +505,7 @@ function renderDock() {
 }
 
 /* ----------------------------------------------------
- * 11. DOCK MAGNIFICATION EFFECT (macOS / Magic UI style)
+ * 12. DOCK MAGNIFICATION EFFECT (macOS / Magic UI style)
  * ---------------------------------------------------- */
 function initDockMagnification() {
   const dock = document.getElementById("magic-dock");
